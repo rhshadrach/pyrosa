@@ -1,0 +1,78 @@
+[project]
+name = "pyrosa"
+description = "Richard's Optimization Solver Adapter"
+authors = [
+    { name = "Richard Shadrach", email = "rhshadrach@gmail.com" },
+]
+keywords = [
+    'optimization',
+    'options',
+    'adapter',
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">= 3.8"
+dynamic = ["version"]
+dependencies = []
+classifiers=[
+    'Development Status :: 4 - Beta',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Intended Audience :: Developers',
+    'Intended Audience :: System Administrators',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Topic :: Utilities',
+]
+
+[tool.setuptools.dynamic]
+version = {file = "pyrosa/VERSION"}
+
+[project.urls]
+Documentation = "https://github.com/rhshadrach/pyrosa/tree/main#readme"
+Source = "https://github.com/rhshadrach/pyrosa"
+Tracker = "https://github.com/rhshadrach/pyrosa/issues"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+lint = ["pre-commit"]
+test = ["pytest"]
+dev = ["pyrosa[lint, test]"]
+
+[tool.ruff.lint]
+select = [
+    "A",   # flake8-builtins
+    # "ANN", # flake8-annotations
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    # "D",   # pydocstyle
+    "DOC", # pydoclint
+    "E",   # pycodestyle - error
+    "F",   # Pyflakes
+    "FA",  # flake8-future-annotations
+    # "FBT", # flake8-boolean-trap
+    "G",   # flake8-logging-format
+    "I",   # isort
+    "INP", # flake8-no-pep420
+    "ISC", # flake8-implicit-str-concat
+    "LOG", # flake8-logging
+    "N",   # pep8-naming
+    "PERF", # Perflint
+    "PIE", # flake8-pie
+    "PL",  # Pylint
+    "Q",   # flake8-quotes
+    "RUF", # Ruff-specific rules
+    "SIM", # flake8-simplify
+    "T20", # flake8-print
+    "UP",  # pyupgrade
+    "W",   # pycodestyle - warning
+    "YTT", # flake8-2020
+]
