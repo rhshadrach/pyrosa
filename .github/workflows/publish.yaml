@@ -13,8 +13,8 @@ on:
         default: 'false'
 
 env:
-  pypi-url: https://pypi.org/p/mkdocs-argref-plugin
-  testpypi-url: https://test.pypi.org/p/mkdocs-argref-plugin
+  pypi-url: https://pypi.org/p/pyrosa
+  testpypi-url: https://test.pypi.org/p/pyrosa
 
 jobs:
   build:
